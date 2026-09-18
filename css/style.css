@@ -568,6 +568,15 @@ button {
   opacity: 1;
 }
 
+.whatsapp-chip {
+  color: #6ee7a3;
+}
+
+.whatsapp-chip:hover {
+  color: #b7ffd0;
+  border-color: rgba(110, 231, 163, 0.5);
+}
+
 .nav-contact-btn {
   display: flex;
   align-items: center;
@@ -1452,6 +1461,71 @@ button {
   width: 120px;
   height: 120px;
   display: block;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  body > *:not(.site-wrapper),
+  .site-wrapper > *:not(main),
+  main > *:not(.container),
+  .container > *:not(.section-business-card) {
+    display: none !important;
+  }
+
+  .site-wrapper,
+  main,
+  .container,
+  .section-business-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .section-business-card > div:first-child,
+  .print-card-btn {
+    display: none !important;
+  }
+
+  .card-flip-stage {
+    display: block !important;
+    height: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    perspective: none !important;
+    cursor: default !important;
+  }
+
+  .business-card-flipper {
+    display: flex !important;
+    gap: 16px;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .business-card-flipper .card-face {
+    position: relative !important;
+    inset: auto !important;
+    flex: 1 1 0;
+    width: auto !important;
+    height: 310px !important;
+    transform: none !important;
+    backface-visibility: visible !important;
+    -webkit-backface-visibility: visible !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .business-card-flipper .card-face-back {
+    display: flex !important;
+  }
 }
 
 .qr-scan-title {
