@@ -439,6 +439,8 @@ button {
   align-items: center;
   gap: 12px;
   padding-left: 6px;
+  flex: 0 0 auto;
+  min-width: 188px;
 }
 
 .nav-logo-badge {
@@ -467,6 +469,7 @@ button {
 .nav-author-info {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .nav-author-name {
@@ -474,6 +477,7 @@ button {
   font-weight: 600;
   letter-spacing: -0.2px;
   color: var(--text-primary);
+  white-space: nowrap;
 }
 
 .nav-author-title {
@@ -486,6 +490,7 @@ button {
 .nav-center {
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .nav-pill-wrapper {
@@ -529,6 +534,7 @@ button {
   align-items: center;
   gap: 8px;
   padding-right: 4px;
+  flex: 0 0 auto;
 }
 
 .nav-chip {
@@ -1851,6 +1857,52 @@ button {
 /* --------------------------------------------------------------------------
    RESPONSIVE QUERIES
    -------------------------------------------------------------------------- */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .nav-bar {
+    padding: 7px 9px;
+  }
+
+  .nav-left {
+    min-width: 170px;
+    gap: 8px;
+  }
+
+  .nav-logo-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  .nav-author-name {
+    font-size: 0.74rem;
+  }
+
+  .nav-author-title {
+    font-size: 0.64rem;
+  }
+
+  .nav-link {
+    padding: 5px 8px;
+    font-size: 0.74rem;
+    gap: 4px;
+  }
+
+  .nav-right,
+  .nav-pill-wrapper {
+    gap: 5px;
+  }
+
+  .nav-chip {
+    gap: 4px;
+    padding: 5px 8px;
+    font-size: 0.68rem;
+  }
+
+  .nav-chip i {
+    font-size: 0.75rem;
+  }
+}
+
 @media (max-width: 992px) {
   .nav-bar {
     padding: 8px 12px;
