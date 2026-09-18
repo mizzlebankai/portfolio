@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMAKYE-DANSO GODSON — Full Stack Engineer & Creative Developer</title>
+  <meta name="description" content="Portfolio of Amakye-Danso Godson, Full Stack Engineer & Creative Developer. Explore featured projects: Olistar Edu, Olistar SMS, SlipSmart, and scalable web solutions.">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Light Orbs & Analog Grain -->
+  <div class="bg-ambient">
+    <div class="ambient-gradient-top"></div>
+    <div class="ambient-gradient-bottom"></div>
+  </div>
+  <div class="bg-noise"></div>
+
+  <div class="site-wrapper">
+
+    <!-- FLOATING ISLAND NAVIGATION -->
+    <header class="nav-fixed-container">
+      <nav class="nav-bar">
+        <!-- Left: Logo & Identity -->
+        <a href="index.html" class="nav-left">
+          <div class="nav-logo-badge">AD</div>
+          <div class="nav-author-info">
+            <span class="nav-author-name">AMAKYE-DANSO GODSON</span>
+            <span class="nav-author-title">Full Stack Engineer</span>
+          </div>
+        </a>
+
+        <!-- Center: Nav Pill Switcher -->
+        <div class="nav-center">
+          <div class="nav-pill-wrapper">
+            <a href="index.html" class="nav-link active"><i class="bi bi-house-door"></i> Work</a>
+            <a href="projects.html" class="nav-link"><i class="bi bi-grid-fill"></i> Projects</a>
+            <a href="about.html" class="nav-link"><i class="bi bi-person-fill"></i> About</a>
+            <a href="resume.html" class="nav-link"><i class="bi bi-file-earmark-person"></i> Resume</a>
+            <a href="contact.html" class="nav-link"><i class="bi bi-chat-left-dots"></i> Contact</a>
+          </div>
+        </div>
+
+        <!-- Right: Social Chips & Quick Action -->
+        <div class="nav-right">
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Light/Dark Theme">
+            <i class="bi bi-sun-fill"></i>
+          </button>
+          <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="nav-chip" title="GitHub Profile">
+            <i class="bi bi-github"></i>
+            <span>GitHub</span>
+            <i class="bi bi-arrow-up-right external-icon"></i>
+          </a>
+          <a href="https://www.threads.net/@godson.ad" target="_blank" rel="noopener noreferrer" class="nav-chip" title="Threads Profile">
+            <i class="bi bi-threads"></i>
+            <span>Threads</span>
+            <i class="bi bi-arrow-up-right external-icon"></i>
+          </a>
+          <a href="resume.html" class="nav-chip" title="View Resume">
+            <i class="bi bi-file-earmark-text"></i>
+            <span>CV</span>
+          </a>
+          <a href="contact.html" class="nav-contact-btn" title="Contact Me">
+            <i class="bi bi-envelope-at"></i>
+          </a>
+          <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: rgba(255, 255, 255, 0.04); border-radius: var(--radius-md); margin-bottom: 4px;">
+        <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-secondary);"><i class="bi bi-circle-half me-2"></i> Theme Switch</span>
+        <button type="button" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+      </div>
+      <a href="index.html" class="mobile-nav-link active">
+        <span><i class="bi bi-house-door me-2"></i> Home / Work</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="projects.html" class="mobile-nav-link">
+        <span><i class="bi bi-grid-fill me-2"></i> Projects</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="about.html" class="mobile-nav-link">
+        <span><i class="bi bi-person-fill me-2"></i> About Me</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="resume.html" class="mobile-nav-link">
+        <span><i class="bi bi-file-earmark-person me-2"></i> Resume & Business Card</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="contact.html" class="mobile-nav-link">
+        <span><i class="bi bi-chat-left-dots me-2"></i> Contact</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <div style="display: flex; gap: 10px; margin-top: 8px;">
+        <a href="https://github.com/mizzlebankai" target="_blank" class="btn-secondary" style="flex: 1; justify-content: center;">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+        <a href="https://www.threads.net/@godson.ad" target="_blank" class="btn-secondary" style="flex: 1; justify-content: center;">
+          <i class="bi bi-threads"></i> Threads
+        </a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- HERO SECTION: THE PERRY WANG OS WINDOW -->
+      <section class="section-hero">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+
+          <!-- Availability Pill -->
+          <div class="hero-badge-container">
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span>Available for full-time roles & remote contracts</span>
+            </div>
+          </div>
+
+          <!-- The Signature Glass OS Window Card -->
+          <div class="window-outer-shell reveal-on-scroll">
+            <div class="glare-edge-top"></div>
+            <div class="window-body">
+              <div class="window-sheen"></div>
+
+              <!-- Window Titlebar with Traffic Lights -->
+              <div class="window-titlebar">
+                <div class="window-dots">
+                  <span class="window-dot red"></span>
+                  <span class="window-dot yellow"></span>
+                  <span class="window-dot green"></span>
+                </div>
+                <div class="window-title">amakye-danso.terminal // portfolio_v2026</div>
+                <div class="window-controls">
+                  <i class="bi bi-plus-lg"></i>
+                </div>
+              </div>
+
+              <!-- Window Content Area -->
+              <div class="window-content">
+                <h1 class="hero-headline">
+                  I craft products, systems & <span class="serif-italic">experiences.</span>
+                </h1>
+
+                <div class="hero-subtext-grid">
+                  <div class="hero-role-block">
+                    <div class="hero-role-title">Full Stack Engineer & Creative Developer</div>
+                    <p class="hero-role-desc">
+                      Engineering resilient backend architectures, intuitive user interfaces, and high-impact digital solutions designed to scale seamlessly.
+                    </p>
+                  </div>
+
+                  <div class="hero-meta-block">
+                    <div class="hero-highlights">
+                      <div class="hero-tag">
+                        <i class="bi bi-mortarboard-fill"></i>
+                        <span>Olistar Edu</span>
+                      </div>
+                      <div class="hero-tag">
+                        <i class="bi bi-building-check"></i>
+                        <span>Olistar SMS</span>
+                      </div>
+                      <div class="hero-tag">
+                        <i class="bi bi-receipt-cutoff"></i>
+                        <span>SlipSmart</span>
+                      </div>
+                      <div class="hero-tag">
+                        <i class="bi bi-cpu-fill"></i>
+                        <span>Node.js & React</span>
+                      </div>
+                      <div class="hero-tag">
+                        <i class="bi bi-cloud-check-fill"></i>
+                        <span>Render & Netlify</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bouncing Scroll Indicator -->
+          <div class="scroll-indicator-wrap">
+            <span class="scroll-text">Scroll to explore work</span>
+            <i class="bi bi-arrow-down-short scroll-icon"></i>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS SECTION -->
+      <section class="section-projects" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-overline">Engineered Solutions</span>
+              <h2 class="section-title">Selected Projects</h2>
+            </div>
+            <p class="section-desc">
+              Production-grade applications built with performance, security, and human-centric interaction at their core.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+
+            <!-- PROJECT 1: Olistar Edu -->
+            <div class="project-card-outer reveal-on-scroll">
+              <div class="card-ambient-bloom bloom-edu"></div>
+              <div class="project-card-inner">
+                <div class="project-content">
+                  <div class="project-meta-row">
+                    <span class="project-badge featured"><i class="bi bi-stars"></i> Featured</span>
+                    <span class="project-badge">EdTech · Learning Platform</span>
+                    <span class="project-badge">2024</span>
+                  </div>
+
+                  <div class="project-title-row">
+                    <h3 class="project-name">Olistar Edu</h3>
+                    <a href="https://Olistaredu.netlify.app" target="_blank" rel="noopener noreferrer" class="project-arrow-icon" title="Visit Live Application">
+                      <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </div>
+
+                  <p class="project-description">
+                    A modern, responsive educational web portal empowering schools, tutors, and students. Features dynamic courseware distribution, assessment modules, and an interactive learning hub crafted with a clean, distraction-free aesthetic.
+                  </p>
+
+                  <div class="project-tech-stack">
+                    <span class="tech-chip"><i class="bi bi-code-slash"></i> React</span>
+                    <span class="tech-chip"><i class="bi bi-hdd-network"></i> Netlify Edge</span>
+                    <span class="tech-chip"><i class="bi bi-palette"></i> Modern CSS</span>
+                    <span class="tech-chip"><i class="bi bi-lightning-charge"></i> REST APIs</span>
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://Olistaredu.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                      <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                      <i class="bi bi-github"></i> Repository
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Visual Preview Mockup -->
+                <div class="project-preview-mockup">
+                  <div class="mockup-header">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <div class="mockup-address-bar">https://olistaredu.netlify.app</div>
+                  </div>
+                  <div class="mockup-visual">
+                    <div class="mockup-inner-hero">
+                      <div class="mockup-brand-icon icon-edu">
+                        <i class="bi bi-mortarboard-fill"></i>
+                      </div>
+                      <div class="mockup-brand-title">Olistar Edu Platform</div>
+                      <div class="mockup-brand-desc">Interactive Academic Portal & Classroom Management</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 2: Olistar SMS -->
+            <div class="project-card-outer reveal-on-scroll">
+              <div class="card-ambient-bloom bloom-sms"></div>
+              <div class="project-card-inner">
+                <div class="project-content">
+                  <div class="project-meta-row">
+                    <span class="project-badge featured"><i class="bi bi-stars"></i> Featured</span>
+                    <span class="project-badge">School Management System</span>
+                    <span class="project-badge">2024</span>
+                  </div>
+
+                  <div class="project-title-row">
+                    <h3 class="project-name">Olistar SMS</h3>
+                    <a href="https://olistarsms.netlify.app" target="_blank" rel="noopener noreferrer" class="project-arrow-icon" title="Visit Live Application">
+                      <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </div>
+
+                  <p class="project-description">
+                    An enterprise-grade School Management & Communications System (SMS) engineered to automate student enrollment, records administration, gradebook ledgering, and real-time parent-teacher messaging broadcasts.
+                  </p>
+
+                  <div class="project-tech-stack">
+                    <span class="tech-chip"><i class="bi bi-layers-fill"></i> Full Stack</span>
+                    <span class="tech-chip"><i class="bi bi-database-fill"></i> Database Architecture</span>
+                    <span class="tech-chip"><i class="bi bi-chat-dots-fill"></i> Automated Messaging</span>
+                    <span class="tech-chip"><i class="bi bi-shield-lock-fill"></i> Auth & Permissions</span>
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://olistarsms.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                      <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                      <i class="bi bi-github"></i> Repository
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Visual Preview Mockup -->
+                <div class="project-preview-mockup">
+                  <div class="mockup-header">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <div class="mockup-address-bar">https://olistarsms.netlify.app</div>
+                  </div>
+                  <div class="mockup-visual">
+                    <div class="mockup-inner-hero">
+                      <div class="mockup-brand-icon icon-sms">
+                        <i class="bi bi-building-check"></i>
+                      </div>
+                      <div class="mockup-brand-title">Olistar SMS Portal</div>
+                      <div class="mockup-brand-desc">Institutional Records & Administrative Cloud Dashboard</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 3: SlipSmart -->
+            <div class="project-card-outer reveal-on-scroll">
+              <div class="card-ambient-bloom bloom-slipsmart"></div>
+              <div class="project-card-inner">
+                <div class="project-content">
+                  <div class="project-meta-row">
+                    <span class="project-badge featured"><i class="bi bi-stars"></i> Featured</span>
+                    <span class="project-badge">FinTech & Invoicing</span>
+                    <span class="project-badge">2024</span>
+                  </div>
+
+                  <div class="project-title-row">
+                    <h3 class="project-name">SlipSmart</h3>
+                    <a href="https://slipsmart.onrender.app" target="_blank" rel="noopener noreferrer" class="project-arrow-icon" title="Visit Live Application">
+                      <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                  </div>
+
+                  <p class="project-description">
+                    A streamlined financial transaction and receipt automation suite. SlipSmart enables businesses and merchants to rapidly generate cryptographically verifiable payment slips, export professional invoices, and audit revenue streams effortlessly.
+                  </p>
+
+                  <div class="project-tech-stack">
+                    <span class="tech-chip"><i class="bi bi-server"></i> Node.js</span>
+                    <span class="tech-chip"><i class="bi bi-cloud-arrow-up-fill"></i> Render Cloud</span>
+                    <span class="tech-chip"><i class="bi bi-file-earmark-pdf-fill"></i> PDF Slip Engine</span>
+                    <span class="tech-chip"><i class="bi bi-graph-up-arrow"></i> Financial Analytics</span>
+                  </div>
+
+                  <div class="project-actions">
+                    <a href="https://slipsmart.onrender.app" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                      <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                      <i class="bi bi-github"></i> Repository
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Visual Preview Mockup -->
+                <div class="project-preview-mockup">
+                  <div class="mockup-header">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <div class="mockup-address-bar">https://slipsmart.onrender.app</div>
+                  </div>
+                  <div class="mockup-visual">
+                    <div class="mockup-inner-hero">
+                      <div class="mockup-brand-icon icon-slipsmart">
+                        <i class="bi bi-receipt-cutoff"></i>
+                      </div>
+                      <div class="mockup-brand-title">SlipSmart Engine</div>
+                      <div class="mockup-brand-desc">Smart Invoice Generation & Financial Record Verification</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CORE COMPETENCIES / STACK SECTION -->
+      <section class="section-stack">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <span class="section-overline">Capabilities</span>
+              <h2 class="section-title">Technical Mastery</h2>
+            </div>
+            <p class="section-desc">
+              From responsive frontend design systems to robust distributed backends and database schemas.
+            </p>
+          </div>
+
+          <div class="stack-grid">
+            <div class="stack-card">
+              <i class="bi bi-window-desktop stack-card-icon"></i>
+              <h3 class="stack-card-title">Frontend Engineering</h3>
+              <p class="stack-card-desc">Creating reactive, ultra-fast user experiences with clean component architecture.</p>
+              <div class="stack-tags">
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">JavaScript (ES6+)</span>
+                <span class="stack-pill">HTML5/CSS3</span>
+                <span class="stack-pill">Tailwind CSS</span>
+                <span class="stack-pill">Bootstrap</span>
+              </div>
+            </div>
+
+            <div class="stack-card">
+              <i class="bi bi-terminal-split stack-card-icon"></i>
+              <h3 class="stack-card-title">Backend Architecture</h3>
+              <p class="stack-card-desc">Building resilient REST APIs, microservices, and server-side automation logic.</p>
+              <div class="stack-tags">
+                <span class="stack-pill">Node.js</span>
+                <span class="stack-pill">Express</span>
+                <span class="stack-pill">RESTful APIs</span>
+                <span class="stack-pill">Auth & JWT</span>
+                <span class="stack-pill">Middleware</span>
+              </div>
+            </div>
+
+            <div class="stack-card">
+              <i class="bi bi-database-check stack-card-icon"></i>
+              <h3 class="stack-card-title">Databases & Storage</h3>
+              <p class="stack-card-desc">Structuring relational & NoSQL data pipelines optimized for throughput and integrity.</p>
+              <div class="stack-tags">
+                <span class="stack-pill">PostgreSQL</span>
+                <span class="stack-pill">MongoDB</span>
+                <span class="stack-pill">MySQL</span>
+                <span class="stack-pill">ORM / Query Design</span>
+              </div>
+            </div>
+
+            <div class="stack-card">
+              <i class="bi bi-cloud-check stack-card-icon"></i>
+              <h3 class="stack-card-title">Cloud & Deployment</h3>
+              <p class="stack-card-desc">Continuous integration, containerized deployments, and zero-downtime hosting.</p>
+              <div class="stack-tags">
+                <span class="stack-pill">Render</span>
+                <span class="stack-pill">Netlify</span>
+                <span class="stack-pill">Git / GitHub</span>
+                <span class="stack-pill">CI/CD Pipelines</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE RESUME CALLOUT -->
+      <section style="padding: 40px 0 100px;">
+        <div class="container">
+          <div style="padding: 48px; border-radius: var(--radius-xl); background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid var(--border-highlight); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+            <div>
+              <span class="section-overline"><i class="bi bi-credit-card-2-front-fill me-1"></i> Interactive Experience</span>
+              <h3 style="font-size: 1.8rem; margin: 8px 0 6px; font-weight: 700;">Explore My Interactive 3D Business Card</h3>
+              <p style="color: var(--text-secondary); max-width: 540px;">
+                Flip the digital holographic card to scan the direct portfolio QR code, review the complete work history, or download my verified resume.
+              </p>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="resume.html" class="btn-primary">
+                <i class="bi bi-arrow-repeat"></i> View 3D Business Card
+              </a>
+              <a href="contact.html" class="btn-secondary">
+                <i class="bi bi-envelope"></i> Let's Talk
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">AMAKYE-DANSO GODSON</div>
+            <p class="footer-tagline">
+              Full Stack Engineer crafting elegant digital products, high-throughput systems, and captivating experiences.
+            </p>
+          </div>
+
+          <div class="footer-links-grid">
+            <div>
+              <div class="footer-col-title">Navigation</div>
+              <ul class="footer-nav-list">
+                <li><a href="index.html" class="footer-nav-link">Work</a></li>
+                <li><a href="projects.html" class="footer-nav-link">Projects Archive</a></li>
+                <li><a href="about.html" class="footer-nav-link">About & Philosophy</a></li>
+                <li><a href="resume.html" class="footer-nav-link">Resume & Card</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="footer-col-title">Connect</div>
+              <ul class="footer-nav-list">
+                <li>
+                  <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                    <i class="bi bi-github"></i> GitHub <i class="bi bi-arrow-up-right" style="font-size: 0.7rem;"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.threads.net/@godson.ad" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                    <i class="bi bi-threads"></i> Threads <i class="bi bi-arrow-up-right" style="font-size: 0.7rem;"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html" class="footer-nav-link">
+                    <i class="bi bi-envelope-fill"></i> Send Message
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-left">
+            <div>© 2026 AMAKYE-DANSO GODSON. All Rights Reserved.</div>
+            <div class="footer-witty">Crafted with passion from Sunyani, Ghana.</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <i class="bi bi-clock"></i>
+            <span id="localClock">--:--:-- GMT</span>
+            <span style="color: var(--accent-emerald);">● Online</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-notice" id="toastNotice">Copied to clipboard!</div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

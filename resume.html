@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume & 3D Business Card — AMAKYE-DANSO GODSON</title>
+  <meta name="description" content="Official Resume, interactive 3D flipping business card, and technical work experience of Amakye-Danso Godson, Full Stack Engineer.">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Light Orbs & Analog Grain -->
+  <div class="bg-ambient">
+    <div class="ambient-gradient-top"></div>
+    <div class="ambient-gradient-bottom"></div>
+  </div>
+  <div class="bg-noise"></div>
+
+  <div class="site-wrapper">
+
+    <!-- FLOATING ISLAND NAVIGATION -->
+    <header class="nav-fixed-container">
+      <nav class="nav-bar">
+        <a href="index.html" class="nav-left">
+          <div class="nav-logo-badge">AD</div>
+          <div class="nav-author-info">
+            <span class="nav-author-name">AMAKYE-DANSO GODSON</span>
+            <span class="nav-author-title">Full Stack Engineer</span>
+          </div>
+        </a>
+
+        <div class="nav-center">
+          <div class="nav-pill-wrapper">
+            <a href="index.html" class="nav-link"><i class="bi bi-house-door"></i> Work</a>
+            <a href="projects.html" class="nav-link"><i class="bi bi-grid-fill"></i> Projects</a>
+            <a href="about.html" class="nav-link"><i class="bi bi-person-fill"></i> About</a>
+            <a href="resume.html" class="nav-link active"><i class="bi bi-file-earmark-person"></i> Resume</a>
+            <a href="contact.html" class="nav-link"><i class="bi bi-chat-left-dots"></i> Contact</a>
+          </div>
+        </div>
+
+        <div class="nav-right">
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Light/Dark Theme">
+            <i class="bi bi-sun-fill"></i>
+          </button>
+          <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="nav-chip">
+            <i class="bi bi-github"></i>
+            <span>GitHub</span>
+            <i class="bi bi-arrow-up-right external-icon"></i>
+          </a>
+          <a href="https://www.threads.net/@godson.ad" target="_blank" rel="noopener noreferrer" class="nav-chip">
+            <i class="bi bi-threads"></i>
+            <span>Threads</span>
+            <i class="bi bi-arrow-up-right external-icon"></i>
+          </a>
+          <a href="contact.html" class="nav-contact-btn" title="Contact Me">
+            <i class="bi bi-envelope-at"></i>
+          </a>
+          <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: rgba(255, 255, 255, 0.04); border-radius: var(--radius-md); margin-bottom: 4px;">
+        <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-secondary);"><i class="bi bi-circle-half me-2"></i> Theme Switch</span>
+        <button type="button" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+      </div>
+      <a href="index.html" class="mobile-nav-link">
+        <span><i class="bi bi-house-door me-2"></i> Home / Work</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="projects.html" class="mobile-nav-link">
+        <span><i class="bi bi-grid-fill me-2"></i> Projects</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="about.html" class="mobile-nav-link">
+        <span><i class="bi bi-person-fill me-2"></i> About Me</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="resume.html" class="mobile-nav-link active">
+        <span><i class="bi bi-file-earmark-person me-2"></i> Resume & Business Card</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="contact.html" class="mobile-nav-link">
+        <span><i class="bi bi-chat-left-dots me-2"></i> Contact</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main style="padding-top: 130px; padding-bottom: 90px;">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="section-header" style="text-align: center; flex-direction: column; align-items: center; gap: 10px;">
+          <span class="section-overline"><i class="bi bi-file-earmark-person-fill me-1"></i> Professional Profile</span>
+          <h1 class="section-title" style="font-size: clamp(2.2rem, 4vw, 3rem);">Curriculum Vitae & Business Card</h1>
+          <p class="section-desc" style="text-align: center; max-width: 620px;">
+            Full Stack Engineer with hands-on experience building, shipping, and maintaining production applications across education and finance.
+          </p>
+        </div>
+
+        <!-- 3D FLIP BUSINESS CARD SECTION -->
+        <div class="section-business-card reveal-on-scroll">
+          <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px;">
+            <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">
+              <i class="bi bi-hand-index-thumb me-1"></i> Tap or Click the Card to Flip & Scan QR Code
+            </span>
+          </div>
+
+          <!-- The 3D Flip Stage -->
+          <div class="card-flip-stage" id="cardFlipStage" title="Click to flip card">
+            <div class="business-card-flipper" id="businessCardFlipper">
+
+              <!-- FRONT FACE -->
+              <div class="card-face card-face-front">
+                <div class="card-front-top">
+                  <div class="card-emblem">
+                    <div class="nav-logo-badge" style="width: 42px; height: 42px; font-size: 1rem;">AD</div>
+                    <div>
+                      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-muted); text-transform: uppercase;">Engineering Card</div>
+                      <div style="font-size: 0.88rem; font-weight: 700; color: #fff;">AMAKYE-DANSO GODSON</div>
+                    </div>
+                  </div>
+                  <div class="card-hologram-chip" title="Holographic Security Chip"></div>
+                </div>
+
+                <div class="card-front-name-block">
+                  <div class="card-full-name">AMAKYE-DANSO GODSON</div>
+                  <div class="card-job-title">Full Stack Engineer & Creative Developer</div>
+                </div>
+
+                <div class="card-front-bottom">
+                  <div class="card-contact-lines">
+                    <span><i class="bi bi-geo-alt me-1"></i> Sunyani, Ghana</span>
+                    <span><i class="bi bi-envelope me-1"></i> mizzlebankai@gmail.com</span>
+                    <span><i class="bi bi-whatsapp me-1"></i> +233 257 933 174</span>
+                  </div>
+                  <div class="card-flip-prompt">
+                    <span>Scan QR</span>
+                    <i class="bi bi-arrow-repeat"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BACK FACE: Direct QR Code Scan to Portfolio -->
+              <div class="card-face card-face-back">
+                <div class="qr-scan-title">AMAKYE-DANSO GODSON</div>
+                <div class="qr-scan-subtitle">PORTFOLIO DASHBOARD ACCESS</div>
+
+                <!-- High Quality Scannable SVG QR Code pointing to index.html -->
+                <div class="qr-code-wrapper">
+                  <svg class="qr-code-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background -->
+                    <rect width="100" height="100" fill="#ffffff" />
+                    <!-- Realistic QR Pattern Corners -->
+                    <!-- Top Left Corner -->
+                    <rect x="10" y="10" width="24" height="24" fill="#000000" rx="3" />
+                    <rect x="14" y="14" width="16" height="16" fill="#ffffff" />
+                    <rect x="18" y="18" width="8" height="8" fill="#000000" />
+
+                    <!-- Top Right Corner -->
+                    <rect x="66" y="10" width="24" height="24" fill="#000000" rx="3" />
+                    <rect x="70" y="14" width="16" height="16" fill="#ffffff" />
+                    <rect x="74" y="18" width="8" height="8" fill="#000000" />
+
+                    <!-- Bottom Left Corner -->
+                    <rect x="10" y="66" width="24" height="24" fill="#000000" rx="3" />
+                    <rect x="14" y="70" width="16" height="16" fill="#ffffff" />
+                    <rect x="18" y="74" width="8" height="8" fill="#000000" />
+
+                    <!-- QR Matrix Data Blocks -->
+                    <rect x="40" y="12" width="6" height="6" fill="#000000" />
+                    <rect x="52" y="12" width="6" height="6" fill="#000000" />
+                    <rect x="44" y="22" width="12" height="6" fill="#000000" />
+
+                    <rect x="12" y="42" width="8" height="6" fill="#000000" />
+                    <rect x="24" y="40" width="6" height="10" fill="#000000" />
+                    <rect x="36" y="36" width="8" height="8" fill="#000000" />
+                    <rect x="48" y="34" width="6" height="12" fill="#000000" />
+                    <rect x="60" y="40" width="10" height="6" fill="#000000" />
+                    <rect x="76" y="42" width="12" height="6" fill="#000000" />
+
+                    <rect x="40" y="52" width="8" height="8" fill="#000000" />
+                    <rect x="54" y="50" width="8" height="6" fill="#000000" />
+                    <rect x="68" y="56" width="6" height="8" fill="#000000" />
+                    <rect x="80" y="54" width="8" height="8" fill="#000000" />
+
+                    <rect x="40" y="68" width="8" height="8" fill="#000000" />
+                    <rect x="54" y="72" width="10" height="8" fill="#000000" />
+                    <rect x="70" y="70" width="8" height="8" fill="#000000" />
+                    <rect x="82" y="72" width="6" height="16" fill="#000000" />
+                    <rect x="46" y="82" width="16" height="6" fill="#000000" />
+                    <rect x="66" y="82" width="10" height="6" fill="#000000" />
+                  </svg>
+                </div>
+
+                <div style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--text-secondary);">
+                  Scan with your phone camera or click below:
+                </div>
+
+                <a href="index.html" class="qr-redirect-btn">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> Open Portfolio Dashboard
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Flip Toggle Button -->
+          <button type="button" class="btn-secondary" id="flipCardTrigger" style="margin-top: 8px;">
+            <i class="bi bi-arrow-repeat"></i> Flip Business Card
+          </button>
+        </div>
+
+        <div class="resume-action-bar reveal-on-scroll">
+          <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <i class="bi bi-github"></i> GitHub Profile
+          </a>
+          <a href="contact.html" class="btn-secondary">
+            <i class="bi bi-envelope-check"></i> Request Official PDF
+          </a>
+          <button type="button" class="btn-secondary copy-email-btn" data-email="mizzlebankai@gmail.com">
+            <i class="bi bi-clipboard"></i> Copy Email
+          </button>
+        </div>
+
+        <!-- DETAILED RESUME TIMELINE GRID -->
+        <div class="resume-timeline-grid reveal-on-scroll">
+
+          <!-- COLUMN 1: WORK EXPERIENCE -->
+          <div>
+            <h2 class="timeline-column-title">
+              <i class="bi bi-briefcase-fill"></i> Work & Engineering Experience
+            </h2>
+
+            <div class="timeline-list">
+
+              <div class="timeline-item">
+                <span class="timeline-node"></span>
+                <div class="timeline-period">2025 — PRESENT</div>
+                <h3 class="timeline-role">IT Support — Web Development</h3>
+                <div class="timeline-organization">St. Ambrose College of Education IT Support Team</div>
+                <p class="timeline-description">
+                  Support campus digital systems as part of the college IT team, with a focus on web development: building and maintaining internal web tools, assisting staff and students with web platforms, and shipping production features for education.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-node"></span>
+                <div class="timeline-period">2023 — PRESENT</div>
+                <h3 class="timeline-role">Full Stack Engineer</h3>
+                <div class="timeline-organization">Independent Projects · Sunyani, Ghana</div>
+                <p class="timeline-description">
+                  Architected and deployed full-stack platforms including <strong>Olistar Edu</strong>, <strong>Olistar SMS</strong>, and <strong>SlipSmart</strong>. Designed database schemas, REST backends, and interactive UIs hosted on Netlify and Render. Available for full-time roles and remote contracts.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-node"></span>
+                <div class="timeline-period">2023 — 2024</div>
+                <h3 class="timeline-role">Lead Developer — Olistar Platforms</h3>
+                <div class="timeline-organization">Olistar Ecosystem</div>
+                <p class="timeline-description">
+                  Spearheaded educational portals and institution management tools: multi-tier authentication, student progress tracking, parent communication, and cloud asset storage.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- COLUMN 2: EDUCATION & COMPETENCIES -->
+          <div>
+            <h2 class="timeline-column-title">
+              <i class="bi bi-mortarboard-fill"></i> Education & Technical Mastery
+            </h2>
+
+            <div class="timeline-list">
+
+              <div class="timeline-item">
+                <span class="timeline-node"></span>
+                <div class="timeline-period">2025 — PRESENT</div>
+                <h3 class="timeline-role">B.Ed in JHS Education — ICT Major, Maths Minor</h3>
+                <div class="timeline-organization">St. Ambrose College of Education</div>
+                <p class="timeline-description">
+                  Teacher-education degree with ICT as major and Mathematics as minor, alongside hands-on work on the college IT Support Team (Web Development).
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-node"></span>
+                <div class="timeline-period">2026</div>
+                <h3 class="timeline-role">Web Development</h3>
+                <div class="timeline-organization">IBM · edX</div>
+                <p class="timeline-description">Professional web development training covering modern frontend and backend application skills.</p>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-node"></span>
+                <div class="timeline-period">2025</div>
+                <h3 class="timeline-role">CS50 Computer Science</h3>
+                <div class="timeline-organization">Harvard CS50 · edX</div>
+                <p class="timeline-description">
+                  Algorithms, data structures, memory, SQL, Python, C, and full-stack web development.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-node"></span>
+                <div class="timeline-period">2024</div>
+                <h3 class="timeline-role">Diploma in IT</h3>
+                <div class="timeline-organization">Kodabs Institute of Information Technology (KIIT), Techiman</div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-node"></span>
+                <div class="timeline-period">2023</div>
+                <h3 class="timeline-role">WASSCE — General Science with IT</h3>
+                <div class="timeline-organization">Akumfi Ameyaw Senior High/Technical School</div>
+              </div>
+
+              <!-- Skills Matrix Card -->
+              <div class="timeline-item">
+                <span class="timeline-node"></span>
+                <div class="timeline-period">TECHNICAL PROFICIENCY</div>
+                <h3 class="timeline-role">Full Stack Toolchain</h3>
+                <div class="timeline-organization">Core Technologies</div>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px;">
+                  <div>
+                    <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 4px;">FRONTEND:</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                      <span class="tech-chip">React</span>
+                      <span class="tech-chip">JavaScript (ES6+)</span>
+                      <span class="tech-chip">HTML5 / CSS3</span>
+                      <span class="tech-chip">Tailwind CSS</span>
+                      <span class="tech-chip">Bootstrap Icons</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 4px;">BACKEND & DATABASE:</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                      <span class="tech-chip">Node.js</span>
+                      <span class="tech-chip">Express</span>
+                      <span class="tech-chip">PostgreSQL</span>
+                      <span class="tech-chip">MongoDB</span>
+                      <span class="tech-chip">REST APIs</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 4px;">DEPLOYMENT & TOOLING:</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                      <span class="tech-chip">Git / GitHub</span>
+                      <span class="tech-chip">Netlify</span>
+                      <span class="tech-chip">Render Cloud</span>
+                      <span class="tech-chip">Postman</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">AMAKYE-DANSO GODSON</div>
+            <p class="footer-tagline">
+              Full Stack Engineer crafting elegant digital products, high-throughput systems, and captivating experiences.
+            </p>
+          </div>
+
+          <div class="footer-links-grid">
+            <div>
+              <div class="footer-col-title">Navigation</div>
+              <ul class="footer-nav-list">
+                <li><a href="index.html" class="footer-nav-link">Work</a></li>
+                <li><a href="projects.html" class="footer-nav-link">Projects Archive</a></li>
+                <li><a href="about.html" class="footer-nav-link">About & Philosophy</a></li>
+                <li><a href="resume.html" class="footer-nav-link">Resume & Card</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="footer-col-title">Connect</div>
+              <ul class="footer-nav-list">
+                <li>
+                  <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                    <i class="bi bi-github"></i> GitHub <i class="bi bi-arrow-up-right" style="font-size: 0.7rem;"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.threads.net/@godson.ad" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                    <i class="bi bi-threads"></i> Threads <i class="bi bi-arrow-up-right" style="font-size: 0.7rem;"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html" class="footer-nav-link">
+                    <i class="bi bi-envelope-fill"></i> Send Message
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-left">
+            <div>© 2026 AMAKYE-DANSO GODSON. All Rights Reserved.</div>
+            <div class="footer-witty">Crafted with passion from Sunyani, Ghana.</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <i class="bi bi-clock"></i>
+            <span id="localClock">--:--:-- GMT</span>
+            <span style="color: var(--accent-emerald);">● Online</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-notice" id="toastNotice">Copied to clipboard!</div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

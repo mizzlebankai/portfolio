@@ -1,0 +1,275 @@
+/**
+ * AMAKYE-DANSO GODSON — PORTFOLIO JAVASCRIPT
+ * Inspired by Perry Wang 2023 (perryw-2023.webflow.io)
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initThemeToggle();
+  initScrollReveal();
+  initNav();
+  initTimezoneClock();
+  initCardFlip();
+  initClipboard();
+  initCardSpotlight();
+  initContactModal();
+  initContactForm();
+});
+
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('userName').value.trim();
+    const email = document.getElementById('userEmail').value.trim();
+    const subject = document.getElementById('userSubject').value.trim();
+    const message = document.getElementById('userMessage').value.trim();
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    const mailto = `mailto:mizzlebankai@gmail.com?cc=godsonamakyedanso@gmail.com&subject=${encodeURIComponent(subject)}&body=${body}`;
+    window.location.href = mailto;
+    const success = document.getElementById('formSuccessMessage');
+    if (success) success.style.display = 'block';
+  });
+}
+
+/* --------------------------------------------------------------------------
+   NAVIGATION & ACTIVE STATES
+   -------------------------------------------------------------------------- */
+function initNav() {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const navDrawer = document.getElementById('mobileNavDrawer');
+
+  if (menuBtn && navDrawer) {
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navDrawer.classList.contains('open');
+      if (isOpen) {
+        navDrawer.classList.remove('open');
+        menuBtn.innerHTML = '<i class="bi bi-list"></i>';
+      } else {
+        navDrawer.classList.add('open');
+        menuBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
+      }
+    });
+
+    // Close when clicking a mobile link
+    navDrawer.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navDrawer.classList.remove('open');
+        menuBtn.innerHTML = '<i class="bi bi-list"></i>';
+      });
+    });
+  }
+}
+
+/* --------------------------------------------------------------------------
+   LIVE TIMEZONE CLOCK & STATUS
+   -------------------------------------------------------------------------- */
+function initTimezoneClock() {
+  const clockElement = document.getElementById('localClock');
+  if (!clockElement) return;
+
+  function updateTime() {
+    const now = new Date();
+    // Format for UTC / West Africa Time (GMT)
+    const options = {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+      timeZone: 'UTC'
+    };
+    clockElement.textContent = `${now.toLocaleTimeString('en-US', options)} GMT`;
+  }
+
+  updateTime();
+  setInterval(updateTime, 1000);
+}
+
+/* --------------------------------------------------------------------------
+   3D FLIP BUSINESS CARD (FOR RESUME PAGE)
+   -------------------------------------------------------------------------- */
+function initCardFlip() {
+  const flipper = document.getElementById('businessCardFlipper');
+  const flipTrigger = document.getElementById('flipCardTrigger');
+  const flipStage = document.getElementById('cardFlipStage');
+
+  if (!flipper) return;
+
+  function toggleFlip(e) {
+    // If user clicked a direct redirect button on the back, allow link click
+    if (e.target.closest('.qr-redirect-btn')) {
+      return;
+    }
+    flipper.classList.toggle('flipped');
+  }
+
+  if (flipStage) {
+    flipStage.addEventListener('click', toggleFlip);
+  }
+
+  if (flipTrigger) {
+    flipTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      flipper.classList.toggle('flipped');
+    });
+  }
+}
+
+/* --------------------------------------------------------------------------
+   COPY TO CLIPBOARD & TOAST NOTIFICATION
+   -------------------------------------------------------------------------- */
+function initClipboard() {
+  const copyBtns = document.querySelectorAll('.copy-email-btn');
+  const toast = document.getElementById('toastNotice');
+
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = btn.getAttribute('data-email') || 'mizzlebankai@gmail.com';
+
+      navigator.clipboard.writeText(email).then(() => {
+        showToast(`Copied to clipboard: ${email}`);
+      }).catch(() => {
+        showToast(`Email: ${email}`);
+      });
+    });
+  });
+
+  function showToast(message) {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3000);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   MOUSE SPOTLIGHT & TILT EFFECT
+   -------------------------------------------------------------------------- */
+function initCardSpotlight() {
+  const cards = document.querySelectorAll('.project-card-outer, .window-outer-shell');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   QUICK CONTACT DRAWER / MODAL
+   -------------------------------------------------------------------------- */
+function initContactModal() {
+  const contactModal = document.getElementById('contactModal');
+  const openBtns = document.querySelectorAll('.open-contact-modal');
+  const closeBtn = document.getElementById('closeContactModal');
+
+  if (!contactModal) return;
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      contactModal.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+
+  contactModal.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+      contactModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   DARK & WHITE THEME SWITCH FEATURE
+   -------------------------------------------------------------------------- */
+function initThemeToggle() {
+  const storedTheme = localStorage.getItem('portfolio-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = storedTheme || (prefersDark ? 'dark' : 'dark'); // Default to obsidian dark
+
+  applyTheme(initialTheme);
+
+  const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+      localStorage.setItem('portfolio-theme', newTheme);
+    });
+  });
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
+
+  toggleBtns.forEach(btn => {
+    if (theme === 'light') {
+      btn.innerHTML = '<i class="bi bi-moon-stars-fill"></i>';
+      btn.setAttribute('title', 'Switch to Dark Obsidian Theme');
+      btn.setAttribute('aria-label', 'Switch to Dark Obsidian Theme');
+    } else {
+      btn.innerHTML = '<i class="bi bi-sun-fill"></i>';
+      btn.setAttribute('title', 'Switch to Crisp White Theme');
+      btn.setAttribute('aria-label', 'Switch to Crisp White Theme');
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
+   -------------------------------------------------------------------------- */
+function initScrollReveal() {
+  const elements = document.querySelectorAll('.reveal-on-scroll');
+  if (!elements.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  elements.forEach(el => observer.observe(el));
+}
+

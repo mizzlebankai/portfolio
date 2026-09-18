@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — AMAKYE-DANSO GODSON</title>
+  <meta name="description" content="Explore production web applications engineered by Amakye-Danso Godson: Olistar Edu, Olistar SMS, and SlipSmart.">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Light Orbs & Analog Grain -->
+  <div class="bg-ambient">
+    <div class="ambient-gradient-top"></div>
+    <div class="ambient-gradient-bottom"></div>
+  </div>
+  <div class="bg-noise"></div>
+
+  <div class="site-wrapper">
+
+    <!-- FLOATING ISLAND NAVIGATION -->
+    <header class="nav-fixed-container">
+      <nav class="nav-bar">
+        <a href="index.html" class="nav-left">
+          <div class="nav-logo-badge">AD</div>
+          <div class="nav-author-info">
+            <span class="nav-author-name">AMAKYE-DANSO GODSON</span>
+            <span class="nav-author-title">Full Stack Engineer</span>
+          </div>
+        </a>
+
+        <div class="nav-center">
+          <div class="nav-pill-wrapper">
+            <a href="index.html" class="nav-link"><i class="bi bi-house-door"></i> Work</a>
+            <a href="projects.html" class="nav-link active"><i class="bi bi-grid-fill"></i> Projects</a>
+            <a href="about.html" class="nav-link"><i class="bi bi-person-fill"></i> About</a>
+            <a href="resume.html" class="nav-link"><i class="bi bi-file-earmark-person"></i> Resume</a>
+            <a href="contact.html" class="nav-link"><i class="bi bi-chat-left-dots"></i> Contact</a>
+          </div>
+        </div>
+
+        <div class="nav-right">
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Light/Dark Theme">
+            <i class="bi bi-sun-fill"></i>
+          </button>
+          <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="nav-chip">
+            <i class="bi bi-github"></i>
+            <span>GitHub</span>
+            <i class="bi bi-arrow-up-right external-icon"></i>
+          </a>
+          <a href="https://www.threads.net/@godson.ad" target="_blank" rel="noopener noreferrer" class="nav-chip">
+            <i class="bi bi-threads"></i>
+            <span>Threads</span>
+            <i class="bi bi-arrow-up-right external-icon"></i>
+          </a>
+          <a href="resume.html" class="nav-chip">
+            <i class="bi bi-file-earmark-text"></i>
+            <span>CV</span>
+          </a>
+          <a href="contact.html" class="nav-contact-btn" title="Contact Me">
+            <i class="bi bi-envelope-at"></i>
+          </a>
+          <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: rgba(255, 255, 255, 0.04); border-radius: var(--radius-md); margin-bottom: 4px;">
+        <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-secondary);"><i class="bi bi-circle-half me-2"></i> Theme Switch</span>
+        <button type="button" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+      </div>
+      <a href="index.html" class="mobile-nav-link">
+        <span><i class="bi bi-house-door me-2"></i> Home / Work</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="projects.html" class="mobile-nav-link active">
+        <span><i class="bi bi-grid-fill me-2"></i> Projects</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="about.html" class="mobile-nav-link">
+        <span><i class="bi bi-person-fill me-2"></i> About Me</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="resume.html" class="mobile-nav-link">
+        <span><i class="bi bi-file-earmark-person me-2"></i> Resume & Business Card</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a href="contact.html" class="mobile-nav-link">
+        <span><i class="bi bi-chat-left-dots me-2"></i> Contact</span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main style="padding-top: 130px; padding-bottom: 90px;">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-overline"><i class="bi bi-code-slash me-1"></i> Featured Archive</span>
+            <h1 class="section-title" style="font-size: clamp(2.2rem, 4vw, 3rem);">System Architectures & Live Products</h1>
+          </div>
+          <p class="section-desc">
+            A comprehensive review of core full-stack applications shipped to production, including live domains and source code repositories.
+          </p>
+        </div>
+
+        <!-- Filter Tags -->
+        <div style="display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap;">
+          <span class="nav-chip" style="background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3);">
+            <i class="bi bi-funnel-fill"></i> All Selected Work (3)
+          </span>
+          <span class="nav-chip">EdTech</span>
+          <span class="nav-chip">School Management</span>
+          <span class="nav-chip">FinTech & Automation</span>
+        </div>
+
+        <!-- PROJECTS DETAILED LIST -->
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: OLISTAR EDU -->
+          <div class="project-card-outer reveal-on-scroll">
+            <div class="card-ambient-bloom bloom-edu"></div>
+            <div class="project-card-inner">
+              <div class="project-content">
+                <div class="project-meta-row">
+                  <span class="project-badge featured"><i class="bi bi-mortarboard-fill"></i> EdTech</span>
+                  <span class="project-badge">Production Deployment</span>
+                  <span class="project-badge">Netlify</span>
+                </div>
+
+                <div class="project-title-row">
+                  <h2 class="project-name">Olistar Edu</h2>
+                  <a href="https://Olistaredu.netlify.app" target="_blank" rel="noopener noreferrer" class="project-arrow-icon" title="Open Olistar Edu">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+
+                <p class="project-description">
+                  <strong>Olistar Edu</strong> is a high-performance web education environment designed to modernize remote and blended classroom workflows. It provides students and teachers with seamless access to curriculum materials, progress metrics, and digital collaboration utilities.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); border-left: 2px solid var(--accent-blue); padding-left: 14px; margin: 4px 0;">
+                  <div><strong style="color: #fff;">Architecture:</strong> Component-driven React frontend connected to optimized asset pipelines.</div>
+                  <div><strong style="color: #fff;">Key Highlights:</strong> Instantaneous page transitions, mobile responsive navigation, accessible typography hierarchy.</div>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span class="tech-chip"><i class="bi bi-code-slash"></i> React</span>
+                  <span class="tech-chip"><i class="bi bi-hdd-network"></i> Netlify Cloud</span>
+                  <span class="tech-chip"><i class="bi bi-palette"></i> CSS3 & Layouts</span>
+                  <span class="tech-chip"><i class="bi bi-lightning-charge"></i> RESTful Architecture</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://Olistaredu.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <i class="bi bi-box-arrow-up-right"></i> Launch Olistaredu.netlify.app
+                  </a>
+                  <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                    <i class="bi bi-github"></i> GitHub Source
+                  </a>
+                </div>
+              </div>
+
+              <!-- Visual Showcase Mockup -->
+              <div class="project-preview-mockup">
+                <div class="mockup-header">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <div class="mockup-address-bar">https://Olistaredu.netlify.app</div>
+                </div>
+                <div class="mockup-visual" style="height: 280px;">
+                  <div class="mockup-inner-hero">
+                    <div class="mockup-brand-icon icon-edu">
+                      <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <div class="mockup-brand-title">Olistar Edu</div>
+                    <div class="mockup-brand-desc">Educational Management & E-Learning Platform</div>
+                    <div style="margin-top: 14px;">
+                      <span class="status-pill" style="font-size: 0.72rem; padding: 4px 10px;">
+                        <span class="status-dot"></span> Active Production
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: OLISTAR SMS -->
+          <div class="project-card-outer reveal-on-scroll">
+            <div class="card-ambient-bloom bloom-sms"></div>
+            <div class="project-card-inner">
+              <div class="project-content">
+                <div class="project-meta-row">
+                  <span class="project-badge featured"><i class="bi bi-building-check"></i> Enterprise System</span>
+                  <span class="project-badge">School Management</span>
+                  <span class="project-badge">Netlify</span>
+                </div>
+
+                <div class="project-title-row">
+                  <h2 class="project-name">Olistar SMS</h2>
+                  <a href="https://olistarsms.netlify.app" target="_blank" rel="noopener noreferrer" class="project-arrow-icon" title="Open Olistar SMS">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+
+                <p class="project-description">
+                  <strong>Olistar SMS</strong> (School Management System) is an administrative enterprise platform engineered to digitize school operations. From student registration registries and automated grade books to real-time communication broadcasts, it unifies institutional administration into one cockpit.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); border-left: 2px solid var(--accent-indigo); padding-left: 14px; margin: 4px 0;">
+                  <div><strong style="color: #fff;">Architecture:</strong> Full-stack administrative dashboard with role-based access control (RBAC).</div>
+                  <div><strong style="color: #fff;">Key Highlights:</strong> Student record auditing, parent messaging module, fee tracking ledger.</div>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span class="tech-chip"><i class="bi bi-layers-fill"></i> Full Stack System</span>
+                  <span class="tech-chip"><i class="bi bi-database-fill"></i> Relational Database</span>
+                  <span class="tech-chip"><i class="bi bi-chat-dots-fill"></i> Notification Gateway</span>
+                  <span class="tech-chip"><i class="bi bi-shield-lock-fill"></i> Role Security</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://olistarsms.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <i class="bi bi-box-arrow-up-right"></i> Launch olistarsms.netlify.app
+                  </a>
+                  <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                    <i class="bi bi-github"></i> GitHub Source
+                  </a>
+                </div>
+              </div>
+
+              <!-- Visual Showcase Mockup -->
+              <div class="project-preview-mockup">
+                <div class="mockup-header">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <div class="mockup-address-bar">https://olistarsms.netlify.app</div>
+                </div>
+                <div class="mockup-visual" style="height: 280px;">
+                  <div class="mockup-inner-hero">
+                    <div class="mockup-brand-icon icon-sms">
+                      <i class="bi bi-building-check"></i>
+                    </div>
+                    <div class="mockup-brand-title">Olistar SMS</div>
+                    <div class="mockup-brand-desc">Institutional Administration & Communications Hub</div>
+                    <div style="margin-top: 14px;">
+                      <span class="status-pill" style="font-size: 0.72rem; padding: 4px 10px;">
+                        <span class="status-dot"></span> Active Production
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: SLIPSMART -->
+          <div class="project-card-outer reveal-on-scroll">
+            <div class="card-ambient-bloom bloom-slipsmart"></div>
+            <div class="project-card-inner">
+              <div class="project-content">
+                <div class="project-meta-row">
+                  <span class="project-badge featured"><i class="bi bi-receipt-cutoff"></i> FinTech & Automation</span>
+                  <span class="project-badge">Cloud Engine</span>
+                  <span class="project-badge">Render</span>
+                </div>
+
+                <div class="project-title-row">
+                  <h2 class="project-name">SlipSmart</h2>
+                  <a href="https://slipsmart.onrender.app" target="_blank" rel="noopener noreferrer" class="project-arrow-icon" title="Open SlipSmart">
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+
+                <p class="project-description">
+                  <strong>SlipSmart</strong> is an automated financial slip generator and invoicing engine deployed on Render Cloud. Tailored for merchants, small businesses, and institutions, it eliminates manual billing errors by transforming order records into clean, printable, and verifiable transaction receipts.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); border-left: 2px solid var(--accent-emerald); padding-left: 14px; margin: 4px 0;">
+                  <div><strong style="color: #fff;">Architecture:</strong> Node.js backend microservice hosted on Render Cloud with real-time rendering.</div>
+                  <div><strong style="color: #fff;">Key Highlights:</strong> Instant PDF receipt generation, financial ledger calculations, audit trail logs.</div>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span class="tech-chip"><i class="bi bi-server"></i> Node.js</span>
+                  <span class="tech-chip"><i class="bi bi-cloud-arrow-up-fill"></i> Render Cloud</span>
+                  <span class="tech-chip"><i class="bi bi-file-earmark-pdf-fill"></i> Dynamic PDF Engine</span>
+                  <span class="tech-chip"><i class="bi bi-shield-check"></i> Verifiable Slips</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://slipsmart.onrender.app" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <i class="bi bi-box-arrow-up-right"></i> Launch slipsmart.onrender.app
+                  </a>
+                  <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                    <i class="bi bi-github"></i> GitHub Source
+                  </a>
+                </div>
+              </div>
+
+              <!-- Visual Showcase Mockup -->
+              <div class="project-preview-mockup">
+                <div class="mockup-header">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <div class="mockup-address-bar">https://slipsmart.onrender.app</div>
+                </div>
+                <div class="mockup-visual" style="height: 280px;">
+                  <div class="mockup-inner-hero">
+                    <div class="mockup-brand-icon icon-slipsmart">
+                      <i class="bi bi-receipt-cutoff"></i>
+                    </div>
+                    <div class="mockup-brand-title">SlipSmart</div>
+                    <div class="mockup-brand-desc">Smart Slip Generation & Transaction Invoicing</div>
+                    <div style="margin-top: 14px;">
+                      <span class="status-pill" style="font-size: 0.72rem; padding: 4px 10px;">
+                        <span class="status-dot"></span> Active Production
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">AMAKYE-DANSO GODSON</div>
+            <p class="footer-tagline">
+              Full Stack Engineer crafting elegant digital products, high-throughput systems, and captivating experiences.
+            </p>
+          </div>
+
+          <div class="footer-links-grid">
+            <div>
+              <div class="footer-col-title">Navigation</div>
+              <ul class="footer-nav-list">
+                <li><a href="index.html" class="footer-nav-link">Work</a></li>
+                <li><a href="projects.html" class="footer-nav-link">Projects Archive</a></li>
+                <li><a href="about.html" class="footer-nav-link">About & Philosophy</a></li>
+                <li><a href="resume.html" class="footer-nav-link">Resume & Card</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="footer-col-title">Connect</div>
+              <ul class="footer-nav-list">
+                <li>
+                  <a href="https://github.com/mizzlebankai" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                    <i class="bi bi-github"></i> GitHub <i class="bi bi-arrow-up-right" style="font-size: 0.7rem;"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.threads.net/@godson.ad" target="_blank" rel="noopener noreferrer" class="footer-nav-link">
+                    <i class="bi bi-threads"></i> Threads <i class="bi bi-arrow-up-right" style="font-size: 0.7rem;"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="contact.html" class="footer-nav-link">
+                    <i class="bi bi-envelope-fill"></i> Send Message
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-bottom-left">
+            <div>© 2026 AMAKYE-DANSO GODSON. All Rights Reserved.</div>
+            <div class="footer-witty">Crafted with passion from Sunyani, Ghana.</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <i class="bi bi-clock"></i>
+            <span id="localClock">--:--:-- GMT</span>
+            <span style="color: var(--accent-emerald);">● Online</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-notice" id="toastNotice">Copied to clipboard!</div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
