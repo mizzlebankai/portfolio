@@ -177,31 +177,34 @@
           </div>
 
           <!-- Contact Form -->
-          <form id="contactForm">
+          <form id="contactForm" action="https://formspree.io/f/mzezzkga" method="POST">
             <div class="contact-form-grid">
               <div>
                 <label class="form-label" for="userName">Your Name</label>
-                <input type="text" id="userName" class="form-input" placeholder="e.g. John Smith" required>
+                <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. John Smith" required>
               </div>
 
               <div>
                 <label class="form-label" for="userEmail">Your Email</label>
-                <input type="email" id="userEmail" class="form-input" placeholder="e.g. john@company.com" required>
+                <input type="email" id="userEmail" name="email" class="form-input" placeholder="e.g. john@company.com" required>
               </div>
 
               <div class="form-group-full">
                 <label class="form-label" for="userSubject">Subject / Opportunity Type</label>
-                <input type="text" id="userSubject" class="form-input" placeholder="e.g. Full Stack Role / Contract Inquiry / Collaboration" required>
+                <input type="text" id="userSubject" name="_subject" class="form-input" placeholder="e.g. Full Stack Role / Contract Inquiry / Collaboration" required>
               </div>
 
               <div class="form-group-full">
                 <label class="form-label" for="userMessage">Message</label>
-                <textarea id="userMessage" class="form-textarea" placeholder="Tell me about your project, timeline, or engineering opportunity..." required></textarea>
+                <textarea id="userMessage" name="message" class="form-textarea" placeholder="Tell me about your project, timeline, or engineering opportunity..." required></textarea>
               </div>
 
               <div class="form-group-full" style="display: flex; justify-content: flex-end; align-items: center; gap: 16px; margin-top: 8px;">
                 <div id="formSuccessMessage" style="display: none; color: var(--accent-emerald); font-size: 0.88rem; font-family: var(--font-mono);">
                   <i class="bi bi-check-circle-fill me-1"></i> Message sent successfully! I'll get back to you shortly.
+                </div>
+                <div id="formErrorMessage" style="display: none; color: #ff8f8f; font-size: 0.88rem; font-family: var(--font-mono);" role="alert">
+                  <i class="bi bi-exclamation-circle-fill me-1"></i> Something went wrong. Please try again.
                 </div>
                 <button type="submit" class="btn-primary" style="padding: 12px 28px;">
                   <i class="bi bi-send-fill"></i> Send Message

@@ -19,17 +19,32 @@ function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = document.getElementById('userName').value.trim();
-    const email = document.getElementById('userEmail').value.trim();
-    const subject = document.getElementById('userSubject').value.trim();
-    const message = document.getElementById('userMessage').value.trim();
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    const mailto = `mailto:mizzlebankai@gmail.com?cc=godsonamakyedanso@gmail.com&subject=${encodeURIComponent(subject)}&body=${body}`;
-    window.location.href = mailto;
     const success = document.getElementById('formSuccessMessage');
-    if (success) success.style.display = 'block';
+    const error = document.getElementById('formErrorMessage');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    if (success) success.style.display = 'none';
+    if (error) error.style.display = 'none';
+    if (submitButton) submitButton.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Form submission failed');
+
+      form.reset();
+      if (success) success.style.display = 'block';
+    } catch (submissionError) {
+      if (error) error.style.display = 'block';
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
   });
 }
 
