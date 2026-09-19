@@ -1,7 +1,4 @@
-/**
- * AMAKYE-DANSO GODSON — PORTFOLIO JAVASCRIPT
- * Inspired by Perry Wang 2023 (perryw-2023.webflow.io)
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
@@ -48,9 +45,7 @@ function initContactForm() {
   });
 }
 
-/* --------------------------------------------------------------------------
-   NAVIGATION & ACTIVE STATES
-   -------------------------------------------------------------------------- */
+
 function initNav() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
@@ -62,7 +57,7 @@ function initNav() {
     }
   });
 
-  // Mobile menu toggle
+  
   const menuBtn = document.getElementById('mobileMenuBtn');
   const navDrawer = document.getElementById('mobileNavDrawer');
 
@@ -78,7 +73,7 @@ function initNav() {
       }
     });
 
-    // Close when clicking a mobile link
+    
     navDrawer.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         navDrawer.classList.remove('open');
@@ -88,16 +83,14 @@ function initNav() {
   }
 }
 
-/* --------------------------------------------------------------------------
-   LIVE TIMEZONE CLOCK & STATUS
-   -------------------------------------------------------------------------- */
+
 function initTimezoneClock() {
   const clockElement = document.getElementById('localClock');
   if (!clockElement) return;
 
   function updateTime() {
     const now = new Date();
-    // Format for UTC / West Africa Time (GMT)
+    
     const options = {
       hour: '2-digit',
       minute: '2-digit',
@@ -112,9 +105,7 @@ function initTimezoneClock() {
   setInterval(updateTime, 1000);
 }
 
-/* --------------------------------------------------------------------------
-   3D FLIP BUSINESS CARD (FOR RESUME PAGE)
-   -------------------------------------------------------------------------- */
+
 function initCardFlip() {
   const flipper = document.getElementById('businessCardFlipper');
   const flipTrigger = document.getElementById('flipCardTrigger');
@@ -123,7 +114,7 @@ function initCardFlip() {
   if (!flipper) return;
 
   function toggleFlip(e) {
-    // If user clicked a direct redirect button on the back, allow link click
+    
     if (e.target.closest('.qr-redirect-btn')) {
       return;
     }
@@ -142,9 +133,7 @@ function initCardFlip() {
   }
 }
 
-/* --------------------------------------------------------------------------
-   COPY TO CLIPBOARD & TOAST NOTIFICATION
-   -------------------------------------------------------------------------- */
+
 function initClipboard() {
   const copyBtns = document.querySelectorAll('.copy-email-btn');
   const toast = document.getElementById('toastNotice');
@@ -172,9 +161,7 @@ function initClipboard() {
   }
 }
 
-/* --------------------------------------------------------------------------
-   MOUSE SPOTLIGHT & TILT EFFECT
-   -------------------------------------------------------------------------- */
+
 function initCardSpotlight() {
   const cards = document.querySelectorAll('.project-card-outer, .window-outer-shell');
 
@@ -190,9 +177,7 @@ function initCardSpotlight() {
   });
 }
 
-/* --------------------------------------------------------------------------
-   QUICK CONTACT DRAWER / MODAL
-   -------------------------------------------------------------------------- */
+
 function initContactModal() {
   const contactModal = document.getElementById('contactModal');
   const openBtns = document.querySelectorAll('.open-contact-modal');
@@ -223,13 +208,11 @@ function initContactModal() {
   });
 }
 
-/* --------------------------------------------------------------------------
-   DARK & WHITE THEME SWITCH FEATURE
-   -------------------------------------------------------------------------- */
+
 function initThemeToggle() {
   const storedTheme = localStorage.getItem('portfolio-theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = storedTheme || (prefersDark ? 'dark' : 'dark'); // Default to obsidian dark
+  const initialTheme = storedTheme || (prefersDark ? 'dark' : 'dark'); 
 
   applyTheme(initialTheme);
 
@@ -261,9 +244,7 @@ function applyTheme(theme) {
   });
 }
 
-/* --------------------------------------------------------------------------
-   SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
-   -------------------------------------------------------------------------- */
+
 function initScrollReveal() {
   const elements = document.querySelectorAll('.reveal-on-scroll');
   if (!elements.length) return;

@@ -1,48 +1,45 @@
-/* ==========================================================================
-   AMAKYE-DANSO GODSON — PORTFOLIO DESIGN SYSTEM
-   Inspired by Perry Wang 2023 (perryw-2023.webflow.io)
-   ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import url('https:
 
 :root {
-  /* Color Palette */
+  
   --bg-black: #080809;
   --bg-deep: #0e0e12;
   --bg-surface: #141418;
   --bg-card: rgba(20, 20, 26, 0.65);
   --bg-card-hover: rgba(26, 26, 34, 0.85);
 
-  /* Border & Specular Light Effects */
+  
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-highlight: rgba(255, 255, 255, 0.22);
   --glare-gradient: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
   --specular-card-border: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0.12) 100%);
 
-  /* Typography Colors */
+  
   --text-primary: #f5f5f7;
   --text-secondary: #9e9ea7;
   --text-muted: #5e5e68;
   --text-accent: #ffffff;
 
-  /* Accent Colors */
+  
   --accent-blue: #38bdf8;
   --accent-indigo: #6366f1;
   --accent-purple: #a855f7;
   --accent-emerald: #10b981;
   --accent-amber: #f59e0b;
 
-  /* Project Glow Colors */
+  
   --glow-olistar-edu: rgba(56, 189, 248, 0.18);
   --glow-olistar-sms: rgba(129, 140, 248, 0.20);
   --glow-slipsmart: rgba(16, 185, 129, 0.18);
 
-  /* Fonts */
+  
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Transitions & Radii */
+  
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
@@ -52,9 +49,7 @@
   --transition-fast: all 0.15s ease;
 }
 
-/* --------------------------------------------------------------------------
-   LIGHT THEME OVERRIDES
-   -------------------------------------------------------------------------- */
+
 [data-theme="light"] {
   --bg-black: #f8f9fa;
   --bg-deep: #f1f2f6;
@@ -228,9 +223,7 @@
   color: #121316;
 }
 
-/* --------------------------------------------------------------------------
-   THEME TOGGLE BUTTON
-   -------------------------------------------------------------------------- */
+
 .theme-toggle-btn {
   display: flex;
   align-items: center;
@@ -263,9 +256,7 @@
   border-color: rgba(0, 0, 0, 0.2);
 }
 
-/* --------------------------------------------------------------------------
-   SCROLL REVEAL ANIMATIONS (SMOOTH PERRY WANG FEEL)
-   -------------------------------------------------------------------------- */
+
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(32px);
@@ -283,9 +274,7 @@
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* --------------------------------------------------------------------------
-   RESET & BASE STYLES
-   -------------------------------------------------------------------------- */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -310,7 +299,7 @@ body {
   line-height: 1.6;
 }
 
-/* Custom scrollbar */
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -345,7 +334,7 @@ button {
   cursor: pointer;
 }
 
-/* Ambient Background Light & Noise Overlay */
+
 .bg-ambient {
   position: fixed;
   inset: 0;
@@ -383,10 +372,10 @@ button {
   opacity: 0.025;
   pointer-events: none;
   z-index: 1;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http:
 }
 
-/* Page wrapper */
+
 .site-wrapper {
   position: relative;
   z-index: 2;
@@ -402,9 +391,7 @@ button {
   padding: 0 24px;
 }
 
-/* --------------------------------------------------------------------------
-   FLOATING ISLAND NAVIGATION
-   -------------------------------------------------------------------------- */
+
 .nav-fixed-container {
   position: fixed;
   top: 20px;
@@ -486,7 +473,7 @@ button {
   color: var(--text-muted);
 }
 
-/* Nav center pill */
+
 .nav-center {
   display: flex;
   align-items: center;
@@ -528,7 +515,7 @@ button {
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
 }
 
-/* Nav right chips */
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -603,7 +590,7 @@ button {
   transform: scale(1.08);
 }
 
-/* Mobile Nav Toggle */
+
 .mobile-nav-toggle {
   display: none;
   align-items: center;
@@ -617,7 +604,7 @@ button {
   font-size: 1.1rem;
 }
 
-/* Mobile Navigation Dropdown */
+
 .mobile-nav-drawer {
   position: fixed;
   top: 76px;
@@ -664,9 +651,7 @@ button {
   font-weight: 600;
 }
 
-/* --------------------------------------------------------------------------
-   HERO SECTION (THE PERRY WANG OS WINDOW)
-   -------------------------------------------------------------------------- */
+
 .section-hero {
   padding-top: 140px;
   padding-bottom: 70px;
@@ -676,7 +661,7 @@ button {
   position: relative;
 }
 
-/* Status / Availability pill */
+
 .hero-badge-container {
   margin-bottom: 24px;
   display: inline-flex;
@@ -709,7 +694,7 @@ button {
   50% { opacity: 0.5; transform: scale(0.85); }
 }
 
-/* Window Outer Bevel & Glare */
+
 .window-outer-shell {
   width: 100%;
   max-width: 980px;
@@ -721,7 +706,7 @@ button {
   overflow: hidden;
 }
 
-/* Top Specular Glare Line */
+
 .glare-edge-top {
   position: absolute;
   top: 0;
@@ -733,7 +718,7 @@ button {
   pointer-events: none;
 }
 
-/* Window Main Body */
+
 .window-body {
   position: relative;
   background: linear-gradient(180deg, rgba(22, 22, 28, 0.94) 0%, rgba(13, 13, 16, 0.97) 100%);
@@ -742,7 +727,7 @@ button {
   backdrop-filter: blur(20px);
 }
 
-/* Diagonal Sheen Animation */
+
 .window-sheen {
   position: absolute;
   top: -100%;
@@ -760,7 +745,7 @@ button {
   25%, 100% { transform: translateY(40%) rotate(15deg); }
 }
 
-/* Window Bar (Traffic lights & Title) */
+
 .window-titlebar {
   display: flex;
   align-items: center;
@@ -804,7 +789,7 @@ button {
   font-size: 0.85rem;
 }
 
-/* Window Content */
+
 .window-content {
   padding: 48px 44px;
 }
@@ -882,7 +867,7 @@ button {
   color: var(--accent-blue);
 }
 
-/* Scroll down prompt */
+
 .scroll-indicator-wrap {
   margin-top: 40px;
   display: flex;
@@ -911,9 +896,7 @@ button {
   60% { transform: translateY(3px); }
 }
 
-/* --------------------------------------------------------------------------
-   FEATURED PROJECTS SECTION (BENTO GLOW CARDS)
-   -------------------------------------------------------------------------- */
+
 .section-projects {
   padding: 80px 0 100px;
   position: relative;
@@ -955,7 +938,7 @@ button {
   max-width: 500px;
 }
 
-/* Project Cards Stack */
+
 .projects-grid {
   display: flex;
   flex-direction: column;
@@ -976,7 +959,7 @@ button {
   box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.85);
 }
 
-/* Ambient color bloom backdrop per project */
+
 .card-ambient-bloom {
   position: absolute;
   inset: 0;
@@ -1009,7 +992,7 @@ button {
   overflow: hidden;
 }
 
-/* Project Info Left */
+
 .project-content {
   display: flex;
   flex-direction: column;
@@ -1139,7 +1122,7 @@ button {
   transform: translateY(-2px);
 }
 
-/* Project Visual Showcase Right */
+
 .project-preview-mockup {
   position: relative;
   border-radius: var(--radius-lg);
@@ -1190,7 +1173,7 @@ button {
   overflow: hidden;
 }
 
-/* Stylized Visual Representation inside Mockup */
+
 .mockup-inner-hero {
   text-align: center;
   padding: 24px;
@@ -1227,9 +1210,7 @@ button {
   color: var(--text-muted);
 }
 
-/* --------------------------------------------------------------------------
-   TECH STACK & CORE COMPETENCIES (MINI BENTO)
-   -------------------------------------------------------------------------- */
+
 .section-stack {
   padding: 60px 0 100px;
 }
@@ -1290,9 +1271,7 @@ button {
   color: #a1a1aa;
 }
 
-/* --------------------------------------------------------------------------
-   3D FLIP BUSINESS CARD (FOR RESUME PAGE)
-   -------------------------------------------------------------------------- */
+
 .section-business-card {
   padding: 60px 0 90px;
   display: flex;
@@ -1338,7 +1317,7 @@ button {
   overflow: hidden;
 }
 
-/* FRONT FACE: Luxury Metallic Dark Theme */
+
 .card-face-front {
   background: radial-gradient(circle at 20% 20%, #20202a 0%, #0d0d12 75%);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1435,7 +1414,7 @@ button {
   50% { opacity: 1; transform: scale(1.04); }
 }
 
-/* BACK FACE: High Contrast QR Code scan to Portfolio */
+
 .card-face-back {
   background: #09090c;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -1557,9 +1536,7 @@ button {
   border-radius: var(--radius-pill);
 }
 
-/* --------------------------------------------------------------------------
-   RESUME TIMELINE & DOWNLOAD ACTIONS
-   -------------------------------------------------------------------------- */
+
 .resume-action-bar {
   display: flex;
   align-items: center;
@@ -1641,9 +1618,7 @@ button {
   line-height: 1.5;
 }
 
-/* --------------------------------------------------------------------------
-   CONTACT PAGE & MODAL
-   -------------------------------------------------------------------------- */
+
 .contact-container-box {
   max-width: 780px;
   margin: 0 auto;
@@ -1735,9 +1710,7 @@ button {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* --------------------------------------------------------------------------
-   FOOTER (PERRY WANG CRAFT STYLE)
-   -------------------------------------------------------------------------- */
+
 .site-footer {
   margin-top: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -1829,7 +1802,7 @@ button {
   color: #4b4b54;
 }
 
-/* Toast notification for clipboard */
+
 .toast-notice {
   position: fixed;
   bottom: 24px;
@@ -1854,9 +1827,7 @@ button {
   opacity: 1;
 }
 
-/* --------------------------------------------------------------------------
-   RESPONSIVE QUERIES
-   -------------------------------------------------------------------------- */
+
 @media (min-width: 993px) and (max-width: 1200px) {
   .nav-bar {
     padding: 7px 9px;
