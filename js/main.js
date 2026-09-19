@@ -10,7 +10,46 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardSpotlight();
   initContactModal();
   initContactForm();
+  initContactExport();
 });
+
+function initContactExport() {
+  const exportButton = document.getElementById('exportContactBtn');
+  if (!exportButton) return;
+
+  exportButton.addEventListener('click', () => {
+    const vCard = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'FN:AMAKYE-DANSO GODSON',
+      'N:GODSON;AMAKYE-DANSO;;;',
+      'TITLE:Full Stack Engineer & Creative Developer',
+      'EMAIL;TYPE=INTERNET:mizzlebankai@gmail.com',
+      'EMAIL;TYPE=INTERNET:godsonamakyedanso@gmail.com',
+      'TEL;TYPE=CELL:+233257933174',
+      'ADR;TYPE=HOME:;;Sunyani;;;Ghana',
+      'URL:https://godport.netlify.app/',
+      'END:VCARD'
+    ].join('\r\n');
+
+    const file = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
+    const downloadUrl = URL.createObjectURL(file);
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'amakye-danso-godson.vcf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(downloadUrl);
+
+    const toast = document.getElementById('toastNotice');
+    if (toast) {
+      toast.textContent = 'Contact card downloaded';
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+  });
+}
 
 function initContactForm() {
   const form = document.getElementById('contactForm');
